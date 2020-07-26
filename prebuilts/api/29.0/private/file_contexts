@@ -19,6 +19,7 @@
 
 # For kernel modules
 /lib(/.*)?          u:object_r:rootfs:s0
+/lib64(/.*)?        u:object_r:rootfs:s0
 
 # Empty directories
 /lost\+found        u:object_r:rootfs:s0
@@ -86,6 +87,7 @@
 /dev/bus/usb(.*)?       u:object_r:usb_device:s0
 /dev/console		u:object_r:console_device:s0
 /dev/cpu_variant:.*     u:object_r:dev_cpu_variant:s0
+/dev/circchar           u:object_r:tty_device:s0
 /dev/device-mapper	u:object_r:dm_device:s0
 /dev/eac		u:object_r:audio_device:s0
 /dev/event-log-tags     u:object_r:runtime_event_log_tags_file:s0

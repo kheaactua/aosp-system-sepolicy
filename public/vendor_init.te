@@ -249,6 +249,10 @@ get_prop(vendor_init, exported2_radio_prop)
 get_prop(vendor_init, exported3_system_prop)
 get_prop(vendor_init, theme_prop)
 
+allow vendor_init self:capability sys_module;
+allow vendor_init vendor_file:system module_load;
+allow vendor_init system_file:file { r_file_perms };
+
 ###
 ### neverallow rules
 ###
